@@ -33,15 +33,21 @@ class CounterApp extends StatelessWidget {
         },
         child: Icon(Icons.add),
       ),
-      body: Center(
-        child: ValueListenableBuilder(
-          valueListenable: _count,
-          builder: (BuildContext ctx, dynamic counter,Widget? child){
-            return Center(child: Text("$counter"));
-          } ,
-
-          
+      body: Column(
+        children:[
+          Center(
+          child: ValueListenableBuilder(
+            valueListenable: _count,
+            builder: (BuildContext ctx, dynamic counter,Widget? child){
+              return Center(child: Text("$counter"));
+            } ,
+      
+            
+          ),
         ),
+        Text("this is a counter")
+
+        ] 
       ),
     );
   }
